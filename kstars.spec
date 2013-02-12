@@ -1,11 +1,11 @@
 %define with_indilib 1
-%define indilib_version 0.8
+%define indilib_version 0.9.6
 %define eigen_version 2.0.3
 %define xplanet_version 1.2.1
 
 Name:		kstars
 Summary:	A Desktop Planetarium
-Version:	4.9.4
+Version:	4.10.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 GFDL
@@ -52,6 +52,10 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %makeinstall_std -C build
 
 %changelog
+* Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
+- New version 4.10.0
+- Bump required indilib version to 0.9.6
+
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
 - New version 4.9.4
 
