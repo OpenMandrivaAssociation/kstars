@@ -5,7 +5,7 @@
 
 Name:		kstars
 Summary:	A Desktop Planetarium
-Version:	4.10.2
+Version:	4.10.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 GFDL
@@ -52,6 +52,9 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %makeinstall_std -C build
 
 %changelog
+* Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
+- New version 4.10.3
+
 * Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
 - New version 4.10.2
 
