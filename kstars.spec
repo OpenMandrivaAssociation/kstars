@@ -3,14 +3,15 @@
 %define eigen_version 2.0.3
 %define xplanet_version 1.2.1
 
-Name:		kstars
 Summary:	A Desktop Planetarium
-Version:	4.12.2
+Name:		kstars
+Version:	4.12.3
 Release:	1
+License:	GPLv2+ GFDL
 Group:		Graphical desktop/KDE
-License:	GPLv2 GFDL
-URL:		http://edu.kde.org/kstars
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Url:		http://edu.kde.org/kstars
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source10:	%{name}.rpmlintrc
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(eigen2) >= %{eigen_version}
 BuildRequires:	pkgconfig(cfitsio)
@@ -52,6 +53,10 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %makeinstall_std -C build
 
 %changelog
+* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.3-1
+- New version 4.12.3
+- Add rpmlint filter
+
 * Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.2-1
 - New version 4.12.2
 
