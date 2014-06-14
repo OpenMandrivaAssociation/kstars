@@ -16,6 +16,7 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:	libfli-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
+BuildRequires:	pkgconfig(QJson)
 %if %{with_indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 Requires:	indilib >= %{indilib_version}
@@ -54,6 +55,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 * Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.2-1
 - New version 4.13.2
 - Requires eigen3 now
+- Add pkgconfig(QJson) to BuildRequires
 
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.4-1
 - New version 4.12.4
