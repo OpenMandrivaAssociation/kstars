@@ -1,23 +1,22 @@
 %define with_indilib 1
 %define indilib_version 0.9.6
-%define eigen_version 2.0.3
 %define xplanet_version 1.2.1
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	4.12.4
+Version:	4.13.2
 Release:	1
 License:	GPLv2+ GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
-BuildRequires:	kdelibs4-devel
-BuildRequires:	pkgconfig(eigen2) >= %{eigen_version}
-BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	xplanet >= %{xplanet_version}
+BuildRequires:	kdelibs4-devel
 BuildRequires:	libfli-devel
-
+BuildRequires:	pkgconfig(cfitsio)
+BuildRequires:	pkgconfig(eigen3)
+BuildRequires:	pkgconfig(QJson)
 %if %{with_indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 Requires:	indilib >= %{indilib_version}
@@ -53,6 +52,11 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.2-1
+- New version 4.13.2
+- Requires eigen3 now
+- Add pkgconfig(QJson) to BuildRequires
+
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.4-1
 - New version 4.12.4
 
