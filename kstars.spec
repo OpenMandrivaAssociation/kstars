@@ -1,5 +1,5 @@
 %define with_indilib 1
-%define indilib_version 0.9.6
+%define indilib_version 0.9.8
 %define xplanet_version 1.2.1
 
 Summary:	A Desktop Planetarium
@@ -59,6 +59,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 - New version 4.14.1
 - Update files
 - Requires python-kde4
+- Requires indilib at least 0.9.8
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
