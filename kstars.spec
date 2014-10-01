@@ -14,6 +14,7 @@ Source10:	%{name}.rpmlintrc
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	kdelibs4-devel
 BuildRequires:	libfli-devel
+BuildRequires:	python-kde4-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(QJson)
@@ -21,6 +22,7 @@ BuildRequires:	pkgconfig(QJson)
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 Requires:	indilib >= %{indilib_version}
 %endif
+Requires:	python-kde4
 
 %description
 KStars is a Desktop Planetarium for KDE. It provides an accurate graphical
@@ -56,6 +58,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
 - Update files
+- Requires python-kde4
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
