@@ -1,11 +1,11 @@
-%define with_indilib 1
+%bcond_without indilib
 %define indilib_version 0.9.8
 %define xplanet_version 1.2.1
 
 Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	4.14.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
@@ -18,8 +18,9 @@ BuildRequires:	python-kde4-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(QJson)
-%if %{with_indilib}
+%if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
+BuildRequires:	indilib-devel-static >= %{indilib_version}
 Requires:	indilib >= %{indilib_version}
 %endif
 Requires:	python-kde4
@@ -55,6 +56,9 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %makeinstall_std -C build
 
 %changelog
+* Wed Oct 01 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-2
+- Add indilib-devel-static to BuildRequires because cmake wants it
+
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
 - Update files
