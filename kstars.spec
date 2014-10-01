@@ -6,7 +6,7 @@ Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	4.14.1
 Release:	1
-License:	GPLv2+ GFDL
+License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
@@ -30,16 +30,17 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %files
 %doc COPYING COPYING.DOC README README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS
+%doc %{_kde_docdir}/HTML/*/kstars
+%{_kde_applicationsdir}/kstars.desktop
 %{_kde_appsdir}/kstars
 %{_kde_bindir}/kstars
-%{_kde_libdir}/libhtmesh.a
-%{_kde_iconsdir}/*/*/apps/kstars.*
-%{_kde_applicationsdir}/kstars.desktop
-%{_kde_datadir}/config.kcfg/kstars.kcfg
 %{_kde_configdir}/kstars.knsrc
-%{_kde_docdir}/HTML/*/kstars
+%{_kde_datadir}/appdata/kstars.appdata.xml
+%{_kde_datadir}/config.kcfg/kstars.kcfg
+%{_kde_iconsdir}/*/*/apps/kstars.*
+%{_kde_libdir}/libhtmesh.a
 
-#----------------------------------------------------------------------
+#----------------------------------------------------------------------------
 
 %prep
 %setup -q
@@ -54,6 +55,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Update files
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
