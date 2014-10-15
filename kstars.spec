@@ -4,8 +4,8 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	4.14.1
-Release:	2
+Version:	4.14.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
@@ -56,6 +56,9 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %makeinstall_std -C build
 
 %changelog
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
+- New version 4.14.2
+
 * Wed Oct 01 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-2
 - Add indilib-devel-static to BuildRequires because cmake wants it
 
