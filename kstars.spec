@@ -1,26 +1,29 @@
-%define with_indilib 1
-%define indilib_version 0.9.6
+%bcond_without indilib
+%define indilib_version 0.9.8
 %define xplanet_version 1.2.1
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	4.13.3
+Version:	14.12.0
 Release:	1
-License:	GPLv2+ GFDL
+License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	kdelibs4-devel
 BuildRequires:	libfli-devel
+BuildRequires:	python-kde4-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(QJson)
-%if %{with_indilib}
+%if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
+BuildRequires:	indilib-devel-static >= %{indilib_version}
 Requires:	indilib >= %{indilib_version}
 %endif
+Requires:	python-kde4
 
 %description
 KStars is a Desktop Planetarium for KDE. It provides an accurate graphical
@@ -30,16 +33,17 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %files
 %doc COPYING COPYING.DOC README README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS
+%doc %{_kde_docdir}/HTML/*/kstars
+%{_kde_applicationsdir}/kstars.desktop
 %{_kde_appsdir}/kstars
 %{_kde_bindir}/kstars
-%{_kde_libdir}/libhtmesh.a
-%{_kde_iconsdir}/*/*/apps/kstars.*
-%{_kde_applicationsdir}/kstars.desktop
-%{_kde_datadir}/config.kcfg/kstars.kcfg
 %{_kde_configdir}/kstars.knsrc
-%{_kde_docdir}/HTML/*/kstars
+%{_kde_datadir}/appdata/kstars.appdata.xml
+%{_kde_datadir}/config.kcfg/kstars.kcfg
+%{_kde_iconsdir}/*/*/apps/kstars.*
+%{_kde_libdir}/libhtmesh.a
 
-#----------------------------------------------------------------------
+#----------------------------------------------------------------------------
 
 %prep
 %setup -q
@@ -52,6 +56,21 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
+- New version 4.14.3
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
+- New version 4.14.2
+
+* Wed Oct 01 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-2
+- Add indilib-devel-static to BuildRequires because cmake wants it
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
+- New version 4.14.1
+- Update files
+- Requires python-kde4
+- Requires indilib at least 0.9.8
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
 
