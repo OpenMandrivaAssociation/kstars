@@ -1,5 +1,5 @@
 %bcond_without indilib
-%define indilib_version 0.9.8
+%define indilib_version 0.9.6
 %define xplanet_version 1.2.1
 
 Summary:	A Desktop Planetarium
