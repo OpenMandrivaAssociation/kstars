@@ -4,7 +4,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	15.04.0
+Version:	15.04.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
