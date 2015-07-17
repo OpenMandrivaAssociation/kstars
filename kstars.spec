@@ -68,7 +68,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_datadir}/config.kcfg/kstars.kcfg                                                                    
 %{_iconsdir}/*/*/apps/kstars.*                                                                         
 %{_libdir}/libhtmesh.a   
-%{_icondir}/hicolor/*/actions/kstars_*
+%{_iconsdir}/hicolor/*/actions/kstars_*
 %{_datadir}/kstars/Henry-Draper.idx                                                            
 %{_datadir}/kstars/Interesting.dat                                                             
 %{_datadir}/kstars/PlanetFacts.dat                                                             
@@ -96,7 +96,6 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_datadir}/kstars/kstars.png                                                                  
 %{_datadir}/kstars/lmc.dat 
 %{_datadir}/kstars/mars.*
-%{_datadir}/kstars/mars.orbit
 %{_datadir}/kstars/mercury.*
 %{_datadir}/kstars/milkyway.dat
 %{_datadir}/kstars/moon*
@@ -116,8 +115,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_datadir}/kstars/textures/*
 %{_datadir}/kstars/tips                                                                        
 %{_datadir}/kstars/unnamedstars.dat
-%{_datadir}/kstars/uranus.*
-%{_datadir}/kstars/uranus.orbit                                                                
+%{_datadir}/kstars/uranus.*                                                               
 %{_datadir}/kstars/valaav.txt 
 %{_datadir}/kstars/venus.*
 %{_datadir}/kstars/wzdownload.png                                                              
