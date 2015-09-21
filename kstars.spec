@@ -62,7 +62,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_datadir}/applications/org.kde.kstars.desktop                                                                                                                                          
 %{_bindir}/kstars                                                                                      
 %{_sysconfdir}/xdg/kstars.knsrc                                                                        
-%{_datadir}/appdata/kstars.appdata.xml 
+%{_datadir}/appdata/org.kde.kstars.appdata.xml
 %{_datadir}/kxmlgui5/kstars/kstarsui.rc
 %{_datadir}/kxmlgui5/kstars/fitsviewer.rc
 %{_datadir}/config.kcfg/kstars.kcfg                                                                    
