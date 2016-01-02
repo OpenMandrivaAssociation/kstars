@@ -67,9 +67,12 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_datadir}/kxmlgui5/kstars/kstarsui.rc
 %{_datadir}/kxmlgui5/kstars/fitsviewer.rc
 %{_datadir}/config.kcfg/kstars.kcfg
+%{_datadir}/knotifications5/kstars.notifyrc
 %{_iconsdir}/*/*/apps/kstars.*
 %{_libdir}/libhtmesh.a
 %{_iconsdir}/hicolor/*/actions/kstars_*
+%{_datadir}/kstars/skycultures.sqlite
+%{_datadir}/kstars/skycultures
 %{_datadir}/kstars/Henry-Draper.idx
 %{_datadir}/kstars/Interesting.dat
 %{_datadir}/kstars/PlanetFacts.dat
@@ -86,7 +89,6 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_datadir}/kstars/comets.dat
 %{_datadir}/kstars/defaultflag.gif
 %{_datadir}/kstars/earth.*
-%{_datadir}/kstars/ekos-*
 %{_datadir}/kstars/geomap.png
 %{_datadir}/kstars/glossary.xml
 %{_datadir}/kstars/go-*
@@ -123,7 +125,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_datadir}/kstars/wzgeo.png
 %{_datadir}/kstars/wzscope.png
 %{_datadir}/kstars/wzstars.png
-
+%{_datadir}/sounds/*.ogg
 #----------------------------------------------------------------------------
 
 %prep
