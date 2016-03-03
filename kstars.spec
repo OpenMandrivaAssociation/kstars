@@ -11,6 +11,7 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
+Patch0:		isnan.patch
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(ECM)
 BuildRequires:  cmake(Qt5Gui)
