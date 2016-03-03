@@ -131,6 +131,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build
