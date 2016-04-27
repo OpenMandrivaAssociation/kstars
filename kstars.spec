@@ -4,14 +4,13 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	15.12.3
-Release:	2
+Version:	16.04.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
-Patch0:		isnan.patch
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(ECM)
 BuildRequires:  cmake(Qt5Gui)
