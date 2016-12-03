@@ -63,7 +63,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %doc %{_docdir}/HTML/*/kstars
 %{_datadir}/applications/org.kde.kstars.desktop
 %{_bindir}/kstars
-%{_datadir}/metainfo/org.kde.kstars.appdata.xml
+%{_datadir}/appdata/org.kde.kstars.appdata.xml
 %{_datadir}/config.kcfg/kstars.kcfg
 %{_datadir}/knotifications5/kstars.notifyrc
 %{_iconsdir}/*/*/apps/kstars.*
