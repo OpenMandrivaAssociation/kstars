@@ -4,7 +4,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -41,7 +41,6 @@ BuildRequires:  cmake(KF5Plotting)
 BuildRequires:  cmake(KF5TextEditor)
 BuildRequires:  cmake(KF5IconThemes)
 BuildRequires:	libfli-devel
-BuildRequires:	python-kde4-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(QJson)
@@ -50,7 +49,6 @@ BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
 Requires:	indilib >= %{indilib_version}
 %endif
-Requires:	python-kde4
 
 %description
 KStars is a Desktop Planetarium for KDE. It provides an accurate graphical
@@ -58,12 +56,11 @@ simulation of the night sky, from any location on Earth, at any date and
 time. The display includes 130,000 stars, 13,000 deep-sky objects,all 8
 planets, the Sun and Moon, and thousands of comets and asteroids.
 
-%files
+%files -f %{name}.lang
 %doc COPYING COPYING.DOC README README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS 
-%doc %{_docdir}/HTML/*/kstars
 %{_datadir}/applications/org.kde.kstars.desktop
 %{_bindir}/kstars
-%{_datadir}/appdata/org.kde.kstars.appdata.xml
+%{_datadir}/metainfo/org.kde.kstars.appdata.xml
 %{_datadir}/config.kcfg/kstars.kcfg
 %{_datadir}/knotifications5/kstars.notifyrc
 %{_iconsdir}/*/*/apps/kstars.*
@@ -82,4 +79,4 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %install
 %ninja_install -C build
-
+%find_lang %{name} --with-html
