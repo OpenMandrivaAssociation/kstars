@@ -5,7 +5,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	17.04.2
+Version:	17.08.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -68,6 +68,11 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_libdir}/libhtmesh.a
 %{_datadir}/kstars
 %{_datadir}/sounds/*.ogg
+%{_sysconfdir}/dbus-1/system.d/org.kde.kf5auth.kstars.conf
+%{_libdir}/libexec/kauth/kauth_kstars_helper
+%{_datadir}/dbus-1/system-services/org.kde.kf5auth.kstars.service
+%{_datadir}/polkit-1/actions/org.kde.kf5auth.kstars.policy
+
 #----------------------------------------------------------------------------
 
 %prep
