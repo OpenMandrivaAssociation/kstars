@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kstars-17.04.0.tar.xz: f77590b0fef27b77b28c11a78baa27a63a9b011e
+sources:
+  kstars-2.9.2.tar.xz: 01bbb94cfcc868fa1de007276065cb3f9ea536c1
