@@ -3,6 +3,8 @@
 %define indilib_version 0.9.8
 %define xplanet_version 1.2.1
 
+%define _disable_lto 1
+
 Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	2.9.2
