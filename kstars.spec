@@ -15,6 +15,7 @@ Source0:	http://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Concurrent)
 BuildRequires:  cmake(Qt5Gui)
 BuildRequires:  cmake(Qt5Qml)
 BuildRequires:  cmake(Qt5Quick)
