@@ -7,7 +7,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	2.9.2
+Version:	2.9.3
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -48,7 +48,6 @@ BuildRequires:  cmake(KF5IconThemes)
 BuildRequires:	libfli-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
-BuildRequires:	pkgconfig(QJson)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
