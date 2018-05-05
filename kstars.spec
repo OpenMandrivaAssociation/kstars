@@ -7,7 +7,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	2.9.3
+Version:	2.9.5
 Release:	1
 Epoch:		1
 License:	GPLv2+
