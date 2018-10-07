@@ -19,6 +19,7 @@ BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Concurrent)
 BuildRequires:  cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Keychain)
 BuildRequires:  cmake(Qt5Qml)
 BuildRequires:  cmake(Qt5Quick)
 BuildRequires:  cmake(Qt5Xml)
@@ -50,6 +51,7 @@ BuildRequires:  cmake(KF5IconThemes)
 BuildRequires:	libfli-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
+BuildRequires:	pkgconfig(zlib)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
