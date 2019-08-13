@@ -88,6 +88,8 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %cmake_kde5
 
 %build
+export CC=gcc
+export CXX=g++
 %ninja -C build
 
 %install
