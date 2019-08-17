@@ -90,6 +90,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
               -DINDI_BUILD_UNITTESTS=OFF
 
 %build
+%global ldflags %{ldflags} -fuse-ld=gold
 export CC=gcc
 export CXX=g++
 %ninja -C build
