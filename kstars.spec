@@ -7,7 +7,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	3.3.4
+Version:	3.3.8
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -90,9 +90,9 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
               -DINDI_BUILD_UNITTESTS=OFF
 
 %build
-%global ldflags %{ldflags} -fuse-ld=gold
-export CC=gcc
-export CXX=g++
+#global ldflags %{ldflags} -fuse-ld=gold
+#export CC=gcc
+#export CXX=g++
 %ninja -C build
 
 %install
