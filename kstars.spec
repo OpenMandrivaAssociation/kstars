@@ -40,6 +40,7 @@ BuildRequires:  cmake(KF5GuiAddons)
 BuildRequires:  cmake(KF5WidgetsAddons)
 BuildRequires:  cmake(KF5NewStuff)
 BuildRequires:  cmake(KF5Notifications)
+BuildRequires:  cmake(KF5NotifyConfig)
 BuildRequires:  cmake(KF5DBusAddons)
 BuildRequires:  cmake(KF5I18n)
 BuildRequires:  cmake(KF5Init)
@@ -50,10 +51,12 @@ BuildRequires:  cmake(KF5XmlGui)
 BuildRequires:  cmake(KF5Plotting)
 BuildRequires:  cmake(KF5TextEditor)
 BuildRequires:  cmake(KF5IconThemes)
+BuildRequires:  cmake(Qt5DataVisualization)
 BuildRequires:	libfli-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:  pkgconfig(libraw)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
