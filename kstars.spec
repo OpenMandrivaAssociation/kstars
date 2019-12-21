@@ -16,6 +16,7 @@ Url:		http://edu.kde.org/kstars
 Source0:	http://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 BuildRequires:	xplanet >= %{xplanet_version}
+BuildRequires:  cmake
 BuildRequires:  cmake(QJSON)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Concurrent)
