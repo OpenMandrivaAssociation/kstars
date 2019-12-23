@@ -95,8 +95,8 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %build
 #global ldflags %{ldflags} -fuse-ld=gold
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %ninja -C build
 
 %install
