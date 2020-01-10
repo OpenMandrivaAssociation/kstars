@@ -89,7 +89,7 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 %cmake_kde5   \
               -DINDI_BUILD_UNITTESTS=OFF
 
