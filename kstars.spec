@@ -57,6 +57,7 @@ BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:  pkgconfig(libraw)
+BuildRequires:  pkgconfig(pthread-stubs)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
