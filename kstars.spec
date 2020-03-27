@@ -74,7 +74,7 @@ time. The display includes 130,000 stars, 13,000 deep-sky objects,all 8
 planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %files -f %{name}.lang
-%doc COPYING COPYING.DOC README README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS 
+%doc COPYING COPYING.DOC README.md README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS 
 %{_datadir}/applications/org.kde.kstars.desktop
 %{_bindir}/kstars
 %{_datadir}/metainfo/org.kde.kstars.appdata.xml
@@ -84,10 +84,10 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %{_libdir}/libhtmesh.a
 %{_datadir}/kstars
 %{_datadir}/sounds/*.ogg
-%{_sysconfdir}/dbus-1/system.d/org.kde.kf5auth.kstars.conf
-%{_libdir}/libexec/kauth/kauth_kstars_helper
-%{_datadir}/dbus-1/system-services/org.kde.kf5auth.kstars.service
-%{_datadir}/polkit-1/actions/org.kde.kf5auth.kstars.policy
+#{_sysconfdir}/dbus-1/system.d/org.kde.kf5auth.kstars.conf
+#{_libdir}/libexec/kauth/kauth_kstars_helper
+#{_datadir}/dbus-1/system-services/org.kde.kf5auth.kstars.service
+#{_datadir}/polkit-1/actions/org.kde.kf5auth.kstars.policy
 
 #----------------------------------------------------------------------------
 
