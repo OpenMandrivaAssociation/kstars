@@ -3,12 +3,12 @@
 %define indilib_version 0.9.8
 %define xplanet_version 1.2.1
 
-%define _disable_lto 1
+#define _disable_lto 1
 
 Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	3.4.1
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -99,8 +99,8 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %build
 #global ldflags %{ldflags} -fuse-ld=gold
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %ninja -C build
 
 %install
