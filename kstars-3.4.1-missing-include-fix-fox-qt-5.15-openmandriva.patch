@@ -1,0 +1,11 @@
+diff -up kstars-3.4.1/kstars/auxiliary/QRoundProgressBar.cpp kstars-3.4.1/kstars/auxiliary/QRoundProgressBar.cpp-om 
+--- kstars-3.4.1/kstars/auxiliary/QRoundProgressBar.cpp 2020-02-23 18:45:53.000000000 +0100
++++ kstars-3.4.1/kstars/auxiliary/QRoundProgressBar.cpp-om      2020-03-27 13:56:47.881356296 +0100
+@@ -19,6 +19,7 @@
+ #include "QRoundProgressBar.h"
+ 
+ #include <QPainter>
++#include <QPainterPath>
+ 
+ QRoundProgressBar::QRoundProgressBar(QWidget *parent)
+     : QWidget(parent), m_min(0), m_max(100), m_value(25), m_nullPosition(PositionTop), m_barStyle(StyleDonut),
