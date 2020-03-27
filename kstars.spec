@@ -53,6 +53,7 @@ BuildRequires:  cmake(KF5TextEditor)
 BuildRequires:  cmake(KF5IconThemes)
 BuildRequires:  cmake(Qt5DataVisualization)
 BuildRequires:	libfli-devel
+BuildRequires:  libnova-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(zlib)
