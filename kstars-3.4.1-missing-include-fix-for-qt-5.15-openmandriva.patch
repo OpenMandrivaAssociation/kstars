@@ -11,8 +11,8 @@ diff -up kstars-3.4.1/kstars/auxiliary/QRoundProgressBar.cpp kstars-3.4.1/kstars
      : QWidget(parent), m_min(0), m_max(100), m_value(25), m_nullPosition(PositionTop), m_barStyle(StyleDonut),
 
 diff -up kstars-3.4.1/kstars/skymapqdraw.cpp kstars-3.4.1/kstars/skymapqdraw.cpp-om 
---- /home/x/Pulpit/kstars-3.4.1/kstars/skymapqdraw.cpp  2020-02-23 18:45:53.000000000 +0100
-+++ /home/x/Pulpit/kstars-3.4.1/kstars/skymapqdraw.cpp-om       2020-03-27 14:10:49.947150838 +0100
+--- kstars-3.4.1/kstars/skymapqdraw.cpp  2020-02-23 18:45:53.000000000 +0100
++++ kstars-3.4.1/kstars/skymapqdraw.cpp-om       2020-03-27 14:10:49.947150838 +0100
 @@ -21,6 +21,7 @@
  #include "projections/projector.h"
  #include "printing/legend.h"
