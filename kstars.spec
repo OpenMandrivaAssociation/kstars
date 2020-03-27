@@ -56,6 +56,7 @@ BuildRequires:	libfli-devel
 BuildRequires:  libnova-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
+BuildRequires:  pkgconfig(gsl)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:  pkgconfig(libraw)
 BuildRequires:  pkgconfig(pthread-stubs)
