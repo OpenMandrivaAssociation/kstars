@@ -15,6 +15,7 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
 Source0:	http://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
+Patch0:   kstars-3.4.1-missing-include-fix-for-qt-5.15-openmandriva.patch
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:  cmake
 BuildRequires:  cmake(QJSON)
