@@ -3,11 +3,9 @@
 %define indilib_version 0.9.8
 %define xplanet_version 1.2.1
 
-#define _disable_lto 1
-
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	3.4.2
+Version:	3.4.3
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -17,50 +15,49 @@ Source0:	http://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 
 BuildRequires:	xplanet >= %{xplanet_version}
-BuildRequires:  cmake
-BuildRequires:  cmake(QJSON)
+BuildRequires:	cmake(QJSON)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Concurrent)
-BuildRequires:  cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Keychain)
-BuildRequires:  cmake(Qt5Qml)
-BuildRequires:  cmake(Qt5Quick)
-BuildRequires:  cmake(Qt5Xml)
-BuildRequires:  cmake(Qt5Sql)
-BuildRequires:  cmake(Qt5Svg)
-BuildRequires:  cmake(Qt5OpenGL)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5Quick)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(Qt5Sql)
+BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5OpenGL)
 BuildRequires:	cmake(Qt5Network)
-BuildRequires:  cmake(Qt5PrintSupport)
-BuildRequires:  cmake(Qt5Multimedia)
-BuildRequires:  cmake(Qt5Test)
+BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(Qt5Multimedia)
+BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5WebSockets)
-BuildRequires:  cmake(KF5Config)
-BuildRequires:  cmake(KF5Crash)
-BuildRequires:  cmake(KF5DocTools)
-BuildRequires:  cmake(KF5GuiAddons)
-BuildRequires:  cmake(KF5WidgetsAddons)
-BuildRequires:  cmake(KF5NewStuff)
-BuildRequires:  cmake(KF5Notifications)
-BuildRequires:  cmake(KF5NotifyConfig)
-BuildRequires:  cmake(KF5DBusAddons)
-BuildRequires:  cmake(KF5I18n)
-BuildRequires:  cmake(KF5Init)
-BuildRequires:  cmake(KF5JobWidgets)
-BuildRequires:  cmake(KF5KIO)
-BuildRequires:  cmake(KF5WindowSystem)
-BuildRequires:  cmake(KF5XmlGui)
-BuildRequires:  cmake(KF5Plotting)
-BuildRequires:  cmake(KF5TextEditor)
-BuildRequires:  cmake(KF5IconThemes)
-BuildRequires:  cmake(Qt5DataVisualization)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5GuiAddons)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5NewStuff)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5NotifyConfig)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5Init)
+BuildRequires:	cmake(KF5JobWidgets)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5Plotting)
+BuildRequires:	cmake(KF5TextEditor)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(Qt5DataVisualization)
 BuildRequires:	libfli-devel
-BuildRequires:  libnova-devel
+BuildRequires:	libnova-devel
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:	pkgconfig(eigen3)
-BuildRequires:  pkgconfig(gsl)
+BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(zlib)
-BuildRequires:  pkgconfig(libraw)
-BuildRequires:  pkgconfig(pthread-stubs)
+BuildRequires:	pkgconfig(libraw)
+BuildRequires:	pkgconfig(pthread-stubs)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
@@ -92,15 +89,12 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
+
 %cmake_kde5   \
               -DINDI_BUILD_UNITTESTS=OFF
 
 %build
-#global ldflags %{ldflags} -fuse-ld=gold
-#export CC=gcc
-#export CXX=g++
 %ninja -C build
 
 %install
