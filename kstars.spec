@@ -3,6 +3,8 @@
 %define indilib_version 0.9.8
 %define xplanet_version 1.2.1
 
+%global optflags %{optflags} -Wno-error=format-security
+
 Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	3.4.3
@@ -58,6 +60,7 @@ BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libraw)
 BuildRequires:	pkgconfig(pthread-stubs)
+BuildRequires:	pkgconfig(wcslib)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
