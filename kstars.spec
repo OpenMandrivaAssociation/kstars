@@ -52,6 +52,7 @@ BuildRequires:	cmake(KF5Plotting)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(Qt5DataVisualization)
+BuildRequires:	cmake(StellarSolver)
 BuildRequires:	libfli-devel
 BuildRequires:	libnova-devel
 BuildRequires:	pkgconfig(cfitsio)
