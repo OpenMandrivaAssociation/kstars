@@ -75,7 +75,7 @@ time. The display includes 130,000 stars, 13,000 deep-sky objects,all 8
 planets, the Sun and Moon, and thousands of comets and asteroids.
 
 %files -f %{name}.lang
-%doc COPYING COPYING.DOC README.md README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS 
+%doc README.md README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS 
 %{_datadir}/applications/org.kde.kstars.desktop
 %{_bindir}/kstars
 %{_datadir}/metainfo/org.kde.kstars.appdata.xml
