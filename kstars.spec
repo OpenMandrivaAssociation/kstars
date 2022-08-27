@@ -7,7 +7,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	3.5.7
+Version:	3.6.0
 Release:	2
 Epoch:		1
 License:	GPLv2+
@@ -15,6 +15,7 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kstars
 Source0:	http://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
+#Patch0:		kstars-3.5.7-stellarsolver-2.4.patch
 
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(QJSON)
