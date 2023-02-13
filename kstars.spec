@@ -97,7 +97,8 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %autosetup -p1
 
 %cmake_kde5   \
-              -DINDI_BUILD_UNITTESTS=OFF
+              -DINDI_BUILD_UNITTESTS=OFF \
+              -DBUILD_TESTING=OFF
 
 %build
 %ninja -C build
