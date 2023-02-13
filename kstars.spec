@@ -1,14 +1,14 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 %bcond_without indilib
-%define indilib_version 0.9.8
+%define indilib_version 2.0.0
 %define xplanet_version 1.2.1
 
 %global optflags %{optflags} -Wno-error=format-security
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	3.6.1
-Release:	2
+Version:	3.6.3
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
