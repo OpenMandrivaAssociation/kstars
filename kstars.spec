@@ -7,12 +7,12 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	3.6.6
-Release:	2
+Version:	3.7.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://edu.kde.org/kstars
-Source0:	http://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
+Url:		https://edu.kde.org/kstars
+Source0:	https://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 
 BuildRequires:	xplanet >= %{xplanet_version}
