@@ -7,7 +7,7 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	3.7.0
+Version:	3.7.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
