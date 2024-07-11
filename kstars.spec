@@ -8,7 +8,7 @@
 Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	3.7.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://edu.kde.org/kstars
@@ -18,39 +18,39 @@ Source10:	%{name}.rpmlintrc
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(QJSON)
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(Qt5Concurrent)
-BuildRequires:	cmake(Qt5Gui)
-BuildRequires:	cmake(Qt5Keychain)
-BuildRequires:	cmake(Qt5Qml)
-BuildRequires:	cmake(Qt5Quick)
-BuildRequires:	cmake(Qt5Xml)
-BuildRequires:	cmake(Qt5Sql)
-BuildRequires:	cmake(Qt5Svg)
-BuildRequires:	cmake(Qt5OpenGL)
-BuildRequires:	cmake(Qt5Network)
-BuildRequires:	cmake(Qt5PrintSupport)
-BuildRequires:	cmake(Qt5Multimedia)
-BuildRequires:	cmake(Qt5Test)
-BuildRequires:	cmake(Qt5WebSockets)
-BuildRequires:	cmake(KF5Config)
-BuildRequires:	cmake(KF5Crash)
-BuildRequires:	cmake(KF5DocTools)
-BuildRequires:	cmake(KF5GuiAddons)
-BuildRequires:	cmake(KF5WidgetsAddons)
-BuildRequires:	cmake(KF5NewStuff)
-BuildRequires:	cmake(KF5Notifications)
-BuildRequires:	cmake(KF5NotifyConfig)
-BuildRequires:	cmake(KF5DBusAddons)
-BuildRequires:	cmake(KF5I18n)
-BuildRequires:	cmake(KF5Init)
-BuildRequires:	cmake(KF5JobWidgets)
-BuildRequires:	cmake(KF5KIO)
-BuildRequires:	cmake(KF5WindowSystem)
-BuildRequires:	cmake(KF5XmlGui)
-BuildRequires:	cmake(KF5Plotting)
-BuildRequires:	cmake(KF5TextEditor)
-BuildRequires:	cmake(KF5IconThemes)
-BuildRequires:	cmake(Qt5DataVisualization)
+BuildRequires:	cmake(Qt6Concurrent)
+BuildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6Keychain)
+BuildRequires:	cmake(Qt6Qml)
+BuildRequires:	cmake(Qt6Quick)
+BuildRequires:	cmake(Qt6Xml)
+BuildRequires:	cmake(Qt6Sql)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6OpenGL)
+BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(Qt6PrintSupport)
+BuildRequires:	cmake(Qt6Multimedia)
+BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6WebSockets)
+BuildRequires:	cmake(KF6Config)
+BuildRequires:	cmake(KF6Crash)
+BuildRequires:	cmake(KF6DocTools)
+BuildRequires:	cmake(KF6GuiAddons)
+BuildRequires:	cmake(KF6WidgetsAddons)
+BuildRequires:	cmake(KF6NewStuff)
+BuildRequires:	cmake(KF6Notifications)
+BuildRequires:	cmake(KF6NotifyConfig)
+BuildRequires:	cmake(KF6DBusAddons)
+BuildRequires:	cmake(KF6I18n)
+BuildRequires:	cmake(KF6Init)
+BuildRequires:	cmake(KF6JobWidgets)
+BuildRequires:	cmake(KF6KIO)
+BuildRequires:	cmake(KF6WindowSystem)
+BuildRequires:	cmake(KF6XmlGui)
+BuildRequires:	cmake(KF6Plotting)
+BuildRequires:	cmake(KF6TextEditor)
+BuildRequires:	cmake(KF6IconThemes)
+BuildRequires:	cmake(Qt6DataVisualization)
 BuildRequires:	cmake(StellarSolver)
 BuildRequires:	libfli-devel
 BuildRequires:	libnova-devel
@@ -94,9 +94,11 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %prep
 %autosetup -p1
 
-%cmake_kde5   \
+%cmake   \
               -DINDI_BUILD_UNITTESTS=OFF \
-              -DBUILD_TESTING=OFF
+              -DBUILD_TESTING=OFF \
+              -DBUILD_QT5=OFF \
+              -G Ninja
 
 %build
 %ninja -C build
