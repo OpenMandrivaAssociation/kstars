@@ -78,9 +78,6 @@ BuildOption:	-DINDI_BUILD_UNITTESTS:BOOL=OFF
 BuildOption:	-DBUILD_TESTING:BOOL=OFF
 BuildOption:	-DBUILD_QT5:BOOL=OFF
 
-%patchlist
-kstars-3.7.6-qt-6.9.patch
-
 %description
 KStars is a Desktop Planetarium for KDE. It provides an accurate graphical
 simulation of the night sky, from any location on Earth, at any date and
