@@ -56,6 +56,7 @@ BuildRequires:	cmake(StellarSolver)
 BuildRequires:	libfli-devel
 BuildRequires:	libnova-devel
 BuildRequires:	pkgconfig(cfitsio)
+BuildRequires:  pkgconfig(libcurl)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(zlib)
