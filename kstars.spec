@@ -96,6 +96,8 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
 %prep
 %autosetup -p1
 
+export CC=gcc
+export CXX=g++
 %cmake   \
               -DINDI_BUILD_UNITTESTS=OFF \
               -DBUILD_TESTING=OFF \
@@ -103,6 +105,8 @@ planets, the Sun and Moon, and thousands of comets and asteroids.
               -G Ninja
 
 %build
+export CC=gcc
+export CXX=g++
 %ninja -C build
 
 %install
