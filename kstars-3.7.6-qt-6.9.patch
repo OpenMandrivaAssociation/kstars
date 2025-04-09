@@ -1,0 +1,12 @@
+diff -up kstars-3.7.6/kstars/ekos/manager.cpp.omv~ kstars-3.7.6/kstars/ekos/manager.cpp
+--- kstars-3.7.6/kstars/ekos/manager.cpp.omv~	2025-04-09 21:00:14.665604086 +0200
++++ kstars-3.7.6/kstars/ekos/manager.cpp	2025-04-09 21:01:38.157710097 +0200
+@@ -1200,7 +1200,7 @@ void Manager::setClientStarted(const QSt
+         profileScripts = doc.array();
+         for (const auto &oneRule : qAsConst(profileScripts))
+         {
+-            auto totalDelay = (oneRule["PreDelay"].toDouble(0) + oneRule["PostDelay"].toDouble(0)) * 1000;
++            auto totalDelay = (oneRule[QStringLiteral("PreDelay")].toDouble(0) + oneRule[QStringLiteral("PostDelay")].toDouble(0)) * 1000;
+             if (totalDelay >= maxTimeout)
+                 maxTimeout = totalDelay + MAX_LOCAL_INDI_TIMEOUT;
+         }

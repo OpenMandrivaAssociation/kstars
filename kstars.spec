@@ -8,7 +8,7 @@
 Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	3.7.6
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://edu.kde.org/kstars
@@ -68,8 +68,18 @@ BuildRequires:	pkgconfig(wcslib)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
-Requires:	indilib >= %{indilib_version}
+# Without indilib installed, we get an error message, but
+# kstars is still usable for people who don't have a telescope
+# or similar device attached - so let's make it a soft dependency
+Recommends:	indilib >= %{indilib_version}
 %endif
+BuildSystem:	cmake
+BuildOption:	-DINDI_BUILD_UNITTESTS:BOOL=OFF
+BuildOption:	-DBUILD_TESTING:BOOL=OFF
+BuildOption:	-DBUILD_QT5:BOOL=OFF
+
+%patchlist
+kstars-3.7.6-qt-6.9.patch
 
 %description
 KStars is a Desktop Planetarium for KDE. It provides an accurate graphical
@@ -77,36 +87,19 @@ simulation of the night sky, from any location on Earth, at any date and
 time. The display includes 130,000 stars, 13,000 deep-sky objects,all 8
 planets, the Sun and Moon, and thousands of comets and asteroids.
 
+%install -a
+# Translated info_url files get installed in the wrong place
+mv %{buildroot}/kstars/* %{buildroot}%{_datadir}/kstars/
+rmdir %{buildroot}/kstars
+
 %files -f %{name}.lang
 %doc README.md README.ephemerides README.customize README.images README.planetmath README.timekeeping AUTHORS 
 %{_datadir}/applications/org.kde.kstars.desktop
 %{_bindir}/kstars
 %{_datadir}/metainfo/org.kde.kstars.appdata.xml
 %{_datadir}/config.kcfg/kstars.kcfg
-#{_datadir}/knotifications5/kstars.notifyrc
 %{_iconsdir}/*/*/apps/kstars.*
 %{_libdir}/libhtmesh.a
 %{_datadir}/kstars
 %{_datadir}/sounds/*.ogg
-#{_sysconfdir}/dbus-1/system.d/org.kde.kf5auth.kstars.conf
-#{_libdir}/libexec/kauth/kauth_kstars_helper
-#{_datadir}/dbus-1/system-services/org.kde.kf5auth.kstars.service
-#{_datadir}/polkit-1/actions/org.kde.kf5auth.kstars.policy
-
-#----------------------------------------------------------------------------
-
-%prep
-%autosetup -p1
-
-%cmake   \
-              -DINDI_BUILD_UNITTESTS=OFF \
-              -DBUILD_TESTING=OFF \
-              -DBUILD_QT5=OFF \
-              -G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --with-html
+%{_datadir}/knotifications6/kstars.notifyrc
