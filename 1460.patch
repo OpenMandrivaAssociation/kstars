@@ -1,0 +1,27 @@
+From 14e98a6c583385dfd947e0077608d76c6a06fc16 Mon Sep 17 00:00:00 2001
+From: Alessandro Astone <ales.astone@gmail.com>
+Date: Tue, 1 Apr 2025 23:25:00 +0200
+Subject: [PATCH] Fix access by key on QJsonValue
+
+Fixes: f9839263ad14a9a589a102fbb7dfa6e5b7501da0
+---
+ kstars/ekos/manager.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/kstars/ekos/manager.cpp b/kstars/ekos/manager.cpp
+index 9754138f5c..b123120af8 100644
+--- a/kstars/ekos/manager.cpp
++++ b/kstars/ekos/manager.cpp
+@@ -1281,7 +1281,8 @@ void Manager::setClientStarted(const QString &host, int port)
+         profileScripts = doc.array();
+         for (const auto &oneRule : qAsConst(profileScripts))
+         {
+-            auto totalDelay = (oneRule["PreDelay"].toDouble(0) + oneRule["PostDelay"].toDouble(0)) * 1000;
++            const auto &oneRuleObj = oneRule.toObject();
++            auto totalDelay = (oneRuleObj["PreDelay"].toDouble(0) + oneRuleObj["PostDelay"].toDouble(0)) * 1000;
+             if (totalDelay >= maxTimeout)
+                 maxTimeout = totalDelay + MAX_LOCAL_INDI_TIMEOUT;
+         }
+-- 
+GitLab
+
