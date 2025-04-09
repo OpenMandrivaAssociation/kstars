@@ -15,6 +15,8 @@ Url:		https://edu.kde.org/kstars
 Source0:	https://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 
+Patch0:  https://invent.kde.org/education/kstars/-/merge_requests/1460.patch
+
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(QJSON)
 BuildRequires:	cmake(ECM)
