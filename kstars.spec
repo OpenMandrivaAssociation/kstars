@@ -8,7 +8,7 @@
 Summary:	A Desktop Planetarium
 Name:		kstars
 Version:	3.7.6
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://edu.kde.org/kstars
