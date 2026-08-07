@@ -7,15 +7,13 @@
 
 Summary:	A Desktop Planetarium
 Name:		kstars
-Version:	3.7.6
-Release:	4
+Version:	3.8.4
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://edu.kde.org/kstars
 Source0:	https://download.kde.org/%{stable}/%{name}/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
-
-Patch0:  https://invent.kde.org/education/kstars/-/merge_requests/1460.patch
 
 BuildRequires:	xplanet >= %{xplanet_version}
 BuildRequires:	cmake(QJSON)
@@ -65,6 +63,7 @@ BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libraw)
 BuildRequires:	pkgconfig(pthread-stubs)
 BuildRequires:	pkgconfig(wcslib)
+BuildRequires:	pkgconfig(opencv4)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
@@ -77,6 +76,7 @@ BuildSystem:	cmake
 BuildOption:	-DINDI_BUILD_UNITTESTS:BOOL=OFF
 BuildOption:	-DBUILD_TESTING:BOOL=OFF
 BuildOption:	-DBUILD_QT5:BOOL=OFF
+BuildOption:	-DBUILD_WITH_QT6:BOOL=ON
 
 %description
 KStars is a Desktop Planetarium for KDE. It provides an accurate graphical
