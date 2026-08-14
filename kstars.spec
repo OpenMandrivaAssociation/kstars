@@ -63,7 +63,7 @@ BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libraw)
 BuildRequires:	pkgconfig(pthread-stubs)
 BuildRequires:	pkgconfig(wcslib)
-BuildRequires:	pkgconfig(opencv4)
+BuildRequires:	pkgconfig(opencv5)
 %if %{with indilib}
 BuildRequires:	pkgconfig(libindi) >= %{indilib_version}
 BuildRequires:	indilib-devel-static >= %{indilib_version}
